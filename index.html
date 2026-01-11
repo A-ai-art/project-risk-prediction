@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Risk Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Project Risk Level Prediction</h1>
+        <form action="/predict" method="post">
+            <label>Team Size:</label>
+            <input type="number" name="Team_Size" required>
+
+            <label>Project Budget (USD):</label>
+            <input type="number" name="Project_Budget_USD" required>
+
+            <label>Estimated Timeline (Months):</label>
+            <input type="number" name="Estimated_Timeline_Months" required>
+
+            <label>Complexity Score:</label>
+            <input type="number" name="Complexity_Score" required>
+
+            <label>Stakeholder Count:</label>
+            <input type="number" name="Stakeholder_Count" required>
+
+            <label>Past Similar Projects:</label>
+            <input type="number" name="Past_Similar_Projects" required>
+
+            <label>Change Request Frequency:</label>
+            <input type="number" name="Change_Request_Frequency" required>
+
+            <button type="submit">Predict Risk Level</button>
+        </form>
+    </div>
+</body>
+</html>
